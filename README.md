@@ -24,11 +24,22 @@ the only secrets it needs are `AGORA_APP_ID` and `AGORA_APP_CERTIFICATE` in `ser
 
 ### 1. Backend
 
+macOS/Linux:
+
 ```bash
 cd server
 uv venv venv && . venv/bin/activate
 uv pip install -r requirements.txt -r requirements-dev.txt
 python src/server.py        # serves on 0.0.0.0:8000
+```
+
+Windows PowerShell:
+
+```powershell
+cd server
+py -3 -m venv venv
+.\venv\Scripts\python.exe -m pip install -r requirements.txt -r requirements-dev.txt
+.\venv\Scripts\python.exe src\server.py
 ```
 
 (or `pytest -q` to run the server tests).
